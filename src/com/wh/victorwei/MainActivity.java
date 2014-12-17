@@ -1,16 +1,24 @@
 package com.wh.victorwei;
 
+import com.squareup.picasso.Picasso;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 public class MainActivity extends Activity {
+	
+	ImageView imageView ;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		imageView = (ImageView) findViewById(R.id.picassoImg);
+		Picasso picasso = Picasso.with(this);
+		picasso.load("").error(R.drawable.error).into(imageView);
 	}
 
 	@Override
