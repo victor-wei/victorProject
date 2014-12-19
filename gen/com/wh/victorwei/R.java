@@ -24,15 +24,40 @@ public final class R {
     public static final class drawable {
         public static final int error=0x7f020000;
         public static final int ic_launcher=0x7f020001;
-        public static final int placeholder=0x7f020002;
+        public static final int icon_user=0x7f020002;
+        public static final int icon_user1=0x7f020003;
+        public static final int placeholder=0x7f020004;
+        public static final int tree_space_1=0x7f020005;
+        public static final int tree_space_2=0x7f020006;
+        public static final int tree_space_n=0x7f020007;
+        public static final int tree_space_y=0x7f020008;
+        public static final int tree_view_icon_close=0x7f020009;
+        public static final int tree_view_icon_open=0x7f02000a;
+        public static final int type_select_btn_focused=0x7f02000b;
+        public static final int type_select_btn_nor=0x7f02000c;
+        public static final int type_select_btn_pressed=0x7f02000d;
     }
     public static final class id {
-        public static final int action_settings=0x7f080002;
-        public static final int picassoImg=0x7f080001;
+        public static final int action_settings=0x7f08000c;
+        public static final int caption=0x7f080005;
+        public static final int icon=0x7f080004;
+        public static final int jumpBtn=0x7f080001;
+        public static final int lv_tree=0x7f080006;
+        public static final int picassoImg=0x7f080002;
         public static final int picassoTv=0x7f080000;
+        public static final int space=0x7f080003;
+        public static final int xlistview_footer_content=0x7f080007;
+        public static final int xlistview_footer_hint_textview=0x7f080009;
+        public static final int xlistview_footer_progressbar=0x7f080008;
+        public static final int xlistview_header_content=0x7f08000a;
+        public static final int xlistview_header_progressbar=0x7f08000b;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int atom_tree=0x7f030001;
+        public static final int tree_view_activity=0x7f030002;
+        public static final int xlistview_footer=0x7f030003;
+        public static final int xlistview_header=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -41,6 +66,14 @@ public final class R {
         public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050001;
+        public static final int xlistview_footer_hint_normal=0x7f050007;
+        public static final int xlistview_footer_hint_ready=0x7f050008;
+        public static final int xlistview_header_hint_loading=0x7f050005;
+        /**  下拉刷新上拉加载 
+         */
+        public static final int xlistview_header_hint_normal=0x7f050003;
+        public static final int xlistview_header_hint_ready=0x7f050004;
+        public static final int xlistview_header_last_time=0x7f050006;
     }
     public static final class style {
         /** 
