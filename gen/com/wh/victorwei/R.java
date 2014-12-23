@@ -130,24 +130,31 @@ containing a value of this type.
         public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060002;
-        public static final int app_name=0x7f060000;
-        public static final int facebook=0x7f060009;
-        public static final int google=0x7f06000b;
-        public static final int hello_world=0x7f060001;
-        public static final int linkedin=0x7f06000c;
-        public static final int myspace=0x7f06000e;
-        public static final int start_app=0x7f06000f;
-        public static final int twitter=0x7f06000a;
-        public static final int wordpress=0x7f06000d;
-        public static final int xlistview_footer_hint_normal=0x7f060007;
-        public static final int xlistview_footer_hint_ready=0x7f060008;
-        public static final int xlistview_header_hint_loading=0x7f060005;
+        public static final int action_settings=0x7f060004;
+        public static final int app_name=0x7f060002;
+        public static final int facebook=0x7f06000b;
+        /** 2.0 数据表的处理语句，可按照功能具体区分  
+         */
+        public static final int firstTestSql=0x7f060001;
+        public static final int google=0x7f06000d;
+        public static final int hello_world=0x7f060003;
+        public static final int linkedin=0x7f06000e;
+        public static final int myspace=0x7f060010;
+        public static final int start_app=0x7f060011;
+        /** 此处存储需要调用的sql语句，注意命名规则 
+1.0 创建数据表的语句，以后增加新的数据表创建语句，在此部分后面添加  
+         */
+        public static final int test=0x7f060000;
+        public static final int twitter=0x7f06000c;
+        public static final int wordpress=0x7f06000f;
+        public static final int xlistview_footer_hint_normal=0x7f060009;
+        public static final int xlistview_footer_hint_ready=0x7f06000a;
+        public static final int xlistview_header_hint_loading=0x7f060007;
         /**  下拉刷新上拉加载 
          */
-        public static final int xlistview_header_hint_normal=0x7f060003;
-        public static final int xlistview_header_hint_ready=0x7f060004;
-        public static final int xlistview_header_last_time=0x7f060006;
+        public static final int xlistview_header_hint_normal=0x7f060005;
+        public static final int xlistview_header_hint_ready=0x7f060006;
+        public static final int xlistview_header_last_time=0x7f060008;
     }
     public static final class style {
         /** 

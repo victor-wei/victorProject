@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--此处存储需要调用的sql语句，注意命名规则 -->
+    
+    <!--1.0 创建数据表的语句，以后增加新的数据表创建语句，在此部分后面添加  -->
+    <string name="test">create table if not exists test(useId text primary key,userName text,userPhone text,address text)</string>
+    
+    <!--2.0 数据表的处理语句，可按照功能具体区分  -->
+    <string name="firstTestSql">select *　from test</string>
+</resources>
