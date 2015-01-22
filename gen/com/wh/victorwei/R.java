@@ -8,6 +8,10 @@
 package com.wh.victorwei;
 
 public final class R {
+    public static final class anim {
+        public static final int frame_anim_zoom_in=0x7f040000;
+        public static final int frame_anim_zoom_out=0x7f040001;
+    }
     public static final class attr {
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
@@ -55,6 +59,45 @@ containing a value of this type.
          */
         public static final int rotateToCenter=0x7f010002;
     }
+    public static final class color {
+        /**  白色 
+         */
+        public static final int black=0x7f060002;
+        /**  绿色 
+         */
+        public static final int blue=0x7f060006;
+        /**  亮灰色 
+         */
+        public static final int darkgray=0x7f06000c;
+        /**  黄色 
+         */
+        public static final int gold=0x7f060009;
+        /**  黑色 
+         */
+        public static final int gray=0x7f060003;
+        /**  红色 
+         */
+        public static final int green=0x7f060005;
+        /**  银色 
+         */
+        public static final int lightgray=0x7f06000b;
+        /**  蓝色 
+         */
+        public static final int orange=0x7f060007;
+        /**  灰色 
+         */
+        public static final int red=0x7f060004;
+        /**  金色 
+         */
+        public static final int silver=0x7f06000a;
+        public static final int transparent=0x7f060000;
+        /**  透明 
+         */
+        public static final int white=0x7f060001;
+        /**  橙色 
+         */
+        public static final int yellow=0x7f060008;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -63,8 +106,8 @@ containing a value of this type.
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f070000;
+        public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
         public static final int error=0x7f020000;
@@ -89,74 +132,79 @@ containing a value of this type.
         public static final int type_select_btn_pressed=0x7f020013;
     }
     public static final class id {
-        public static final int East=0x7f040000;
-        public static final int North=0x7f040003;
-        public static final int South=0x7f040001;
-        public static final int West=0x7f040002;
-        public static final int action_settings=0x7f04001a;
-        public static final int caption=0x7f04000a;
-        public static final int icon=0x7f040009;
-        public static final int jumpBtn=0x7f040005;
-        public static final int lv_tree=0x7f040014;
-        public static final int main_circle_layout=0x7f04000c;
-        public static final int main_facebook_image=0x7f04000e;
-        public static final int main_google_image=0x7f040010;
-        public static final int main_linkedin_image=0x7f040011;
-        public static final int main_myspace_image=0x7f04000f;
-        public static final int main_selected_textView=0x7f04000d;
-        public static final int main_twitter_image=0x7f040012;
-        public static final int main_wordpress_image=0x7f040013;
-        public static final int netImage=0x7f04000b;
-        public static final int picassoImg=0x7f040006;
-        public static final int picassoTv=0x7f040004;
-        public static final int space=0x7f040008;
-        public static final int testSld=0x7f040007;
-        public static final int xlistview_footer_content=0x7f040015;
-        public static final int xlistview_footer_hint_textview=0x7f040017;
-        public static final int xlistview_footer_progressbar=0x7f040016;
-        public static final int xlistview_header_content=0x7f040018;
-        public static final int xlistview_header_progressbar=0x7f040019;
+        public static final int East=0x7f050000;
+        public static final int North=0x7f050003;
+        public static final int South=0x7f050001;
+        public static final int West=0x7f050002;
+        public static final int action_settings=0x7f05001b;
+        public static final int caption=0x7f05000a;
+        public static final int icon=0x7f050009;
+        public static final int jumpBtn=0x7f050005;
+        public static final int lv_tree=0x7f050015;
+        public static final int main_circle_layout=0x7f05000c;
+        public static final int main_facebook_image=0x7f05000e;
+        public static final int main_google_image=0x7f050010;
+        public static final int main_linkedin_image=0x7f050011;
+        public static final int main_myspace_image=0x7f05000f;
+        public static final int main_selected_textView=0x7f05000d;
+        public static final int main_twitter_image=0x7f050012;
+        public static final int main_wordpress_image=0x7f050013;
+        public static final int message=0x7f050014;
+        public static final int netImage=0x7f05000b;
+        public static final int picassoImg=0x7f050006;
+        public static final int picassoTv=0x7f050004;
+        public static final int space=0x7f050008;
+        public static final int testSld=0x7f050007;
+        public static final int xlistview_footer_content=0x7f050016;
+        public static final int xlistview_footer_hint_textview=0x7f050018;
+        public static final int xlistview_footer_progressbar=0x7f050017;
+        public static final int xlistview_header_content=0x7f050019;
+        public static final int xlistview_header_progressbar=0x7f05001a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int atom_tree=0x7f030001;
         public static final int image_test=0x7f030002;
         public static final int index=0x7f030003;
-        public static final int tree_view_activity=0x7f030004;
-        public static final int xlistview_footer=0x7f030005;
-        public static final int xlistview_header=0x7f030006;
+        public static final int toast_layout=0x7f030004;
+        public static final int tree_view_activity=0x7f030005;
+        public static final int xlistview_footer=0x7f030006;
+        public static final int xlistview_header=0x7f030007;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f0a0000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060004;
-        public static final int app_name=0x7f060002;
-        public static final int facebook=0x7f06000b;
+        public static final int action_settings=0x7f080004;
+        public static final int app_name=0x7f080002;
+        public static final int facebook=0x7f08000b;
         /** 2.0 数据表的处理语句，可按照功能具体区分  
          */
-        public static final int firstTestSql=0x7f060001;
-        public static final int google=0x7f06000d;
-        public static final int hello_world=0x7f060003;
-        public static final int linkedin=0x7f06000e;
-        public static final int myspace=0x7f060010;
-        public static final int start_app=0x7f060011;
+        public static final int firstTestSql=0x7f080001;
+        public static final int google=0x7f08000d;
+        public static final int hello_world=0x7f080003;
+        public static final int linkedin=0x7f08000e;
+        public static final int myspace=0x7f080010;
+        public static final int start_app=0x7f080011;
         /** 此处存储需要调用的sql语句，注意命名规则 
 1.0 创建数据表的语句，以后增加新的数据表创建语句，在此部分后面添加  
          */
-        public static final int test=0x7f060000;
-        public static final int twitter=0x7f06000c;
-        public static final int wordpress=0x7f06000f;
-        public static final int xlistview_footer_hint_normal=0x7f060009;
-        public static final int xlistview_footer_hint_ready=0x7f06000a;
-        public static final int xlistview_header_hint_loading=0x7f060007;
+        public static final int test=0x7f080000;
+        public static final int twitter=0x7f08000c;
+        public static final int wordpress=0x7f08000f;
+        public static final int xlistview_footer_hint_normal=0x7f080009;
+        public static final int xlistview_footer_hint_ready=0x7f08000a;
+        public static final int xlistview_header_hint_loading=0x7f080007;
         /**  下拉刷新上拉加载 
          */
-        public static final int xlistview_header_hint_normal=0x7f060005;
-        public static final int xlistview_header_hint_ready=0x7f060006;
-        public static final int xlistview_header_last_time=0x7f060008;
+        public static final int xlistview_header_hint_normal=0x7f080005;
+        public static final int xlistview_header_hint_ready=0x7f080006;
+        public static final int xlistview_header_last_time=0x7f080008;
     }
     public static final class style {
+        /**  动画 
+         */
+        public static final int Animation_Zoom=0x7f090002;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -178,11 +226,11 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f090001;
     }
     public static final class styleable {
         /** Attributes that can be used with a Circle.

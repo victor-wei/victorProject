@@ -16,5 +16,10 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    <!-- 动画 -->
+	<style mce_bogus="1" name="Animation_Zoom" parent="android:Animation">
+		<item name="android:windowEnterAnimation">@anim/frame_anim_zoom_in</item>
+		<item name="android:windowExitAnimation">@anim/frame_anim_zoom_out</item>
+	</style>
 
 </resources>
