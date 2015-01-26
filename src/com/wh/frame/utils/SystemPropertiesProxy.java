@@ -7,7 +7,7 @@ import dalvik.system.*;
 
 /**
  * 获取系统属性
- * @author wufucheng
+ * @author victorwei
  */
 public class SystemPropertiesProxy {
 	

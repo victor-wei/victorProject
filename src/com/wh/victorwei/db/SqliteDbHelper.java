@@ -5,8 +5,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
+/**
+ * @author weihe
+ * 数据库版本升级，根据version判断，在onUpgrade中执行相应的升级代码
+ * 
+ */
 public class SqliteDbHelper extends SQLiteOpenHelper {
-
+    
 	private static String dbName = "victor.db";
 	private static final int VERSION = 1;
 	private Context context;

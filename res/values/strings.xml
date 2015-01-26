@@ -19,5 +19,13 @@
     <string name="wordpress">Wordpress</string>
     <string name="myspace">Myspace</string>
     <string name="start_app">Starting application:</string>
+    
+    <!-- 提示信息  -->
+	<string name="info_confirm_exit">确定要退出吗?</string>
+	<string name="info_loading">信息加载中，请稍侯</string>
+	<string name="info_more">更多</string>
+	<string name="info_crash">程序出错，即将退出</string>
+	<string name="info_net_unavailable">目前网络连接不可用</string>
+	<string name="info_error_net">网络异常</string>
 
 </resources>

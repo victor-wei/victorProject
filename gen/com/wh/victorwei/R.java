@@ -183,6 +183,14 @@ containing a value of this type.
         public static final int firstTestSql=0x7f080001;
         public static final int google=0x7f08000d;
         public static final int hello_world=0x7f080003;
+        /**  提示信息  
+         */
+        public static final int info_confirm_exit=0x7f080012;
+        public static final int info_crash=0x7f080015;
+        public static final int info_error_net=0x7f080017;
+        public static final int info_loading=0x7f080013;
+        public static final int info_more=0x7f080014;
+        public static final int info_net_unavailable=0x7f080016;
         public static final int linkedin=0x7f08000e;
         public static final int myspace=0x7f080010;
         public static final int start_app=0x7f080011;
