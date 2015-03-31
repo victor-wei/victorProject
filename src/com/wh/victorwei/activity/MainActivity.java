@@ -1,6 +1,11 @@
-package com.wh.victorwei;
+package com.wh.victorwei.activity;
 
 import com.squareup.picasso.Picasso;
+import com.wh.victorwei.R;
+import com.wh.victorwei.R.drawable;
+import com.wh.victorwei.R.id;
+import com.wh.victorwei.R.layout;
+import com.wh.victorwei.R.menu;
 import com.wh.victorwei.test.TreeViewTest;
 
 import android.app.Activity;
@@ -18,9 +23,10 @@ import android.widget.TextView;
 public class MainActivity extends Activity  implements OnClickListener{
 	
 	private Context context;
-	ImageView imageView ;
 	TextView  picassoTv;
 	Button jumpBtn;
+	Button drawer_btn;
+	Button image_btn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +35,20 @@ public class MainActivity extends Activity  implements OnClickListener{
 		context = this;
 		initComponent();
 		
-		Picasso picasso = Picasso.with(this);
-		picasso.load("http://imgur.com/gallery/WoZXWkP").error(R.drawable.error).into(imageView);
+		
 	}
     
 	private void initComponent() {
-		imageView = (ImageView) findViewById(R.id.picassoImg);
-		jumpBtn = (Button) findViewById(R.id.jumpBtn);
 		
+		jumpBtn = (Button) findViewById(R.id.jumpBtn);
+		 
 		jumpBtn.setOnClickListener(MainActivity.this);
+		drawer_btn = (Button) findViewById(R.id.drawer_btn);
+		
+		drawer_btn.setOnClickListener(MainActivity.this);
+		image_btn = (Button) findViewById(R.id.image_btn);
+		
+		image_btn.setOnClickListener(MainActivity.this);
 	}
 	
 	@Override
@@ -67,6 +78,16 @@ public class MainActivity extends Activity  implements OnClickListener{
 			Intent intent  = new Intent();
 			intent.setClass(context, TreeViewTest.class);
 			startActivity(intent);
+			break;
+		case R.id.drawer_btn:
+			Intent intentDrawer  = new Intent();
+			intentDrawer.setClass(context, DrawLayoutActivity.class);
+			startActivity(intentDrawer);
+			break;
+		case R.id.image_btn:
+			Intent imageIntent  = new Intent();
+			imageIntent.setClass(context, ImageLoadActivity.class);
+			startActivity(imageIntent);
 			break;
 
 		default:

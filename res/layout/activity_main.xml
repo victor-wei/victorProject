@@ -6,29 +6,47 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.wh.victorwei.MainActivity" >
+    tools:context="com.wh.victorwei.activity.MainActivity" >
 
     <TextView
         android:id="@+id/picassoTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_marginLeft="10dip"
+        android:text="victors" />
     <Button 
         android:id="@+id/jumpBtn"
         android:layout_width="wrap_content"
         android:layout_height="30dip"
-        android:text="jump"
-        android:layout_toRightOf="@id/picassoTv"
+        android:text="树结构"
         android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/picassoTv"
         android:background="#ffffff"/>
     <ImageView 
         android:id="@+id/picassoImg"
         android:layout_below="@id/jumpBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dip"
+        android:layout_marginTop="5dp"
         />
-    <SlidingDrawer 
-        android:id="@+id/testSld"></SlidingDrawer>
+    <Button 
+        android:id="@+id/drawer_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dip"
+        android:layout_marginTop="5dp"
+        android:text="drawer"
+        android:layout_marginLeft="10dip"
+        android:layout_below="@id/picassoImg"
+        android:background="#ffffff"/>
+    <Button 
+        android:id="@+id/image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dip"
+        android:layout_marginTop="5dp"
+        android:text="image"
+        android:layout_marginLeft="10dip"
+        android:layout_below="@id/drawer_btn"
+        android:background="#ffffff"/>
 
 </RelativeLayout>

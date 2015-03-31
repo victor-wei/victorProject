@@ -23,7 +23,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".test.ImageTestActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +32,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".test.TreeViewTest"></activity>
+        <activity android:name="com.wh.victorwei.activity.DrawLayoutActivity"></activity>
+        <activity android:name="com.wh.victorwei.activity.ImageLoadActivity"></activity>
+        <activity android:name="com.wh.victorwei.test.ImageTestActivity"></activity>
     </application>
     
 

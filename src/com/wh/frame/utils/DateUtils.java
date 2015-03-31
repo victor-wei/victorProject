@@ -412,5 +412,13 @@ public class DateUtils {
 			return "";
 		}
 	}
+	
+	public static Date addDate(final Date dt, final int num) {
+		final Calendar rightNow = Calendar.getInstance();
+		rightNow.setTime(dt);
+		rightNow.add(Calendar.DATE, num);// 你要加减的日
+		final Date result = rightNow.getTime();
+		return result;
+	}
 
 }

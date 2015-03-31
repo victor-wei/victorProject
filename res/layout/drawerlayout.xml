@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <android.support.v4.widget.DrawerLayout 
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <FrameLayout 
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button 
+            android:id="@+id/show_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show"/>
+    </FrameLayout>
+    <LinearLayout 
+        android:id="@+id/left_content_layout"
+        android:layout_width="600dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:choiceMode="singleChoice"
+       	android:orientation="vertical" 
+       	android:background="@drawable/error"
+        >
+        <TextView
+            android:id="@+id/hello_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hello_world" 
+            />
+        <Button 
+            android:id="@+id/hello_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show"/>
+    </LinearLayout>
+        
+    </android.support.v4.widget.DrawerLayout>
+        
+
+</RelativeLayout>
