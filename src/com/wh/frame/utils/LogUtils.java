@@ -3,7 +3,6 @@ package com.wh.frame.utils;
 import android.util.*;
 
 import com.wh.victorwei.Setting;
-import com.xiaomishu.rp.frame.*;
 
 /**
  * 日志处理

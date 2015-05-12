@@ -5,25 +5,47 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="7"
         android:targetSdkVersion="14" />
-    <uses-permission  android:name="android.permission.INTERNET"/>
-     <!-- The following permissions are OPTIONAL. -->
 
-  <!-- Used to adjust the work load depending on the type of network the device is using. -->
-  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-  <!-- Used to load images from the gallery content provider. -->
-  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-  <!-- Used to load images for contact photos. -->
-  <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- Used to load images from the gallery content provider. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Used to load images for contact photos. -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- <uses-permission android:name="getui.permission.GetuiService.第三方包名" /> -->
+    <uses-permission android:name="getui.permission.GetuiService.com.wh.victorwei" />
+
+    <!-- 自定义权限 -->
+    <!--
+    <permission
+        android:name="getui.permission.GetuiService.第三方包名"
+        android:protectionLevel="normal" >
+    </permission>
+    -->
+    <permission
+        android:name="getui.permission.GetuiService.com.wh.victorwei"
+        android:protectionLevel="normal" >
+    </permission>
 
     <application
+        android:name="com.wh.victorwei.activity.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:label="@string/app_name" >
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.wh.frame.push.GetuiSdkDemoActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,11 +53,111 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".test.TreeViewTest"></activity>
-        <activity android:name="com.wh.victorwei.activity.DrawLayoutActivity"></activity>
-        <activity android:name="com.wh.victorwei.activity.ImageLoadActivity"></activity>
-        <activity android:name="com.wh.victorwei.test.ImageTestActivity"></activity>
+        <activity android:name=".activity.MainActivity" >
+        </activity>
+        <activity android:name=".test.TreeViewTest" >
+        </activity>
+        <activity android:name="com.wh.victorwei.activity.DrawLayoutActivity" >
+        </activity>
+        <activity android:name="com.wh.victorwei.activity.ImageLoadActivity" >
+        </activity>
+        <activity android:name="com.wh.victorwei.test.ImageTestActivity" >
+        </activity>
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="YGxXJj0jS362Svo9BCqI83" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="wQxXe1Vznj8hBewVNFQtj3" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="DehQkGMbMW5nFAnS12mud4" />
+        <meta-data
+            android:name="PUSH_GROUPID"
+            android:value="" />
+           
+		<!-- 配置第三方Receiver -->
+        <receiver
+            android:name="com.wh.frame.push.PushDemoReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.etVyv7RHJ28BqN3KKCtKJ6" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:process=":pushservice"
+            android:exported="true"
+            android:label="NotificationCenter" >
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+            </intent-filter>
+        </receiver>
+        <!-- <receiver
+            android:name="com.igexin.sdk.PushReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver> -->
+        <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+        
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+		<service android:name="com.igexin.download.DownloadService" android:process=":pushservice" />
+		<receiver android:name="com.igexin.download.DownloadReceiver"> 
+			<intent-filter>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+		</receiver>
+		<provider
+		    android:process=":pushservice" 
+		    android:name="com.igexin.download.DownloadProvider"
+			android:authorities="downloads.com.wh.frame.push"	/>
+			<!-- android:authorities="downloads.第三方包名" -->
+		
+        <activity android:name="com.igexin.getuiext.activity.GetuiExtActivity"  
+        	android:configChanges="orientation|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:process=":pushservice"
+            android:taskAffinity="android.task.myServicetask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:exported="false" />
+        
+        <receiver android:name="com.igexin.getuiext.service.PayloadReceiver" android:exported="false" >
+			<intent-filter>
+			  	<!-- 这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改  -->
+				<action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+				<!-- android:name="com.igexin.sdk.action.第三方的appId" -->				
+				<action android:name="com.igexin.sdk.action.YGxXJj0jS362Svo9BCqI83" />
+			</intent-filter>
+		</receiver>
+        
+        <service android:name="com.igexin.getuiext.service.GetuiExtService" android:process=":pushservice" />
+        
     </application>
-    
 
 </manifest>

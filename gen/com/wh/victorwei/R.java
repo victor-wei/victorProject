@@ -136,48 +136,161 @@ containing a value of this type.
         public static final int North=0x7f050003;
         public static final int South=0x7f050001;
         public static final int West=0x7f050002;
-        public static final int action_settings=0x7f050022;
+        public static final int app_logo=0x7f050023;
+        public static final int app_logo_province=0x7f050024;
+        public static final int app_name=0x7f050025;
+        public static final int app_name_title=0x7f050022;
+        public static final int app_need_size=0x7f050028;
+        public static final int app_progress=0x7f050029;
+        public static final int app_size=0x7f050027;
+        public static final int app_version=0x7f050026;
+        public static final int beginText=0x7f050084;
+        public static final int btn_bind_alias=0x7f050065;
+        public static final int btn_clear=0x7f050063;
+        public static final int btn_pmsg=0x7f05005f;
+        public static final int btn_psmsg=0x7f050060;
+        public static final int btn_service=0x7f050064;
+        public static final int btn_unbind_alias=0x7f050066;
         public static final int caption=0x7f05000b;
+        public static final int click_down=0x7f050035;
+        public static final int click_down_img=0x7f050036;
+        public static final int click_upload=0x7f05002a;
+        public static final int close=0x7f050051;
         public static final int content_frame=0x7f05000d;
+        public static final int down_click_linearLayout=0x7f050030;
+        public static final int downlaod_progress_horizontal=0x7f05007d;
+        public static final int download_app_name=0x7f05007b;
+        public static final int download_app_version=0x7f05007c;
+        public static final int download_layout=0x7f050077;
         public static final int drawer_btn=0x7f050007;
         public static final int drawerlayout=0x7f05000c;
+        public static final int durationText=0x7f050085;
+        public static final int getui_notification__style2_title=0x7f05001a;
+        public static final int getui_notification_bg=0x7f050012;
+        public static final int getui_notification_date=0x7f050014;
+        public static final int getui_notification_download_content=0x7f05001e;
+        public static final int getui_notification_download_progressbar=0x7f05001f;
+        public static final int getui_notification_icon=0x7f050013;
+        public static final int getui_notification_icon2=0x7f050015;
+        public static final int getui_notification_style1=0x7f050016;
+        public static final int getui_notification_style1_content=0x7f050018;
+        public static final int getui_notification_style1_title=0x7f050017;
+        public static final int getui_notification_style2=0x7f050019;
+        public static final int getui_notification_style3=0x7f05001b;
+        public static final int getui_notification_style3_content=0x7f05001c;
+        public static final int getui_notification_style4=0x7f05001d;
         public static final int hello_btn=0x7f050011;
         public static final int hello_tv=0x7f050010;
         public static final int icon=0x7f05000a;
         public static final int image_btn=0x7f050008;
         public static final int jumpBtn=0x7f050005;
         public static final int left_content_layout=0x7f05000f;
-        public static final int lv_tree=0x7f05001c;
-        public static final int main_circle_layout=0x7f050013;
-        public static final int main_facebook_image=0x7f050015;
-        public static final int main_google_image=0x7f050017;
-        public static final int main_linkedin_image=0x7f050018;
-        public static final int main_myspace_image=0x7f050016;
-        public static final int main_selected_textView=0x7f050014;
-        public static final int main_twitter_image=0x7f050019;
-        public static final int main_wordpress_image=0x7f05001a;
-        public static final int message=0x7f05001b;
-        public static final int netImage=0x7f050012;
+        public static final int lv_tree=0x7f050087;
+        public static final int m_background=0x7f050021;
+        public static final int main_circle_layout=0x7f050052;
+        public static final int main_facebook_image=0x7f050054;
+        public static final int main_google_image=0x7f050056;
+        public static final int main_linkedin_image=0x7f050057;
+        public static final int main_myspace_image=0x7f050055;
+        public static final int main_selected_textView=0x7f050053;
+        public static final int main_twitter_image=0x7f050058;
+        public static final int main_wordpress_image=0x7f050059;
+        public static final int manage_app=0x7f050032;
+        public static final int maybe=0x7f050037;
+        public static final int maybe_list=0x7f050038;
+        public static final int message=0x7f050086;
+        public static final int netImage=0x7f050020;
+        public static final int next_time=0x7f050034;
+        public static final int notification_background=0x7f050067;
+        public static final int notification_diffsize=0x7f050074;
+        public static final int notification_fullsize=0x7f050073;
+        public static final int notification_icon=0x7f050069;
+        public static final int notification_layout=0x7f050068;
+        public static final int notification_name=0x7f05006b;
+        public static final int notification_right=0x7f05006e;
+        public static final int notification_right_left=0x7f05006f;
+        public static final int notification_right_top_left=0x7f050070;
+        public static final int notification_right_under_left=0x7f050072;
+        public static final int notification_title=0x7f05006a;
+        public static final int notification_update_icon=0x7f050075;
+        public static final int notification_update_text=0x7f050076;
+        public static final int notification_version=0x7f050071;
+        public static final int other_operation=0x7f050031;
         public static final int picassoImg=0x7f050006;
         public static final int picassoTv=0x7f050004;
+        public static final int rec_install1=0x7f05003b;
+        public static final int rec_install2=0x7f050041;
+        public static final int rec_install3=0x7f050047;
+        public static final int rec_install4=0x7f05004d;
+        public static final int recommend1=0x7f05003e;
+        public static final int recommend2=0x7f050044;
+        public static final int recommend3=0x7f05004a;
+        public static final int recommend4=0x7f050050;
+        public static final int recommend_lin1=0x7f050039;
+        public static final int recommend_lin2=0x7f05003f;
+        public static final int recommend_lin3=0x7f050045;
+        public static final int recommend_lin4=0x7f05004b;
+        public static final int recommend_logo1=0x7f05003a;
+        public static final int recommend_logo2=0x7f050040;
+        public static final int recommend_logo3=0x7f050046;
+        public static final int recommend_logo4=0x7f05004c;
+        public static final int recommend_pro1=0x7f05003c;
+        public static final int recommend_pro2=0x7f050042;
+        public static final int recommend_pro3=0x7f050048;
+        public static final int recommend_pro4=0x7f05004e;
+        public static final int setup_app_name=0x7f05007f;
+        public static final int setup_app_version=0x7f050080;
+        public static final int setup_icon=0x7f050082;
+        public static final int setup_layout=0x7f05007e;
+        public static final int setup_message=0x7f050081;
+        public static final int setup_text=0x7f050083;
         public static final int show_btn=0x7f05000e;
         public static final int space=0x7f050009;
-        public static final int xlistview_footer_content=0x7f05001d;
-        public static final int xlistview_footer_hint_textview=0x7f05001f;
-        public static final int xlistview_footer_progressbar=0x7f05001e;
-        public static final int xlistview_header_content=0x7f050020;
-        public static final int xlistview_header_progressbar=0x7f050021;
+        public static final int status=0x7f050078;
+        public static final int status1=0x7f05003d;
+        public static final int status2=0x7f050043;
+        public static final int status3=0x7f050049;
+        public static final int status4=0x7f05004f;
+        public static final int status_img=0x7f050079;
+        public static final int status_txt=0x7f05007a;
+        public static final int tvappid=0x7f05005d;
+        public static final int tvappkey=0x7f05005a;
+        public static final int tvappsecret=0x7f05005b;
+        public static final int tvclientid=0x7f05005e;
+        public static final int tvlog=0x7f050062;
+        public static final int tvloglabel=0x7f050061;
+        public static final int tvmastersecret=0x7f05005c;
+        public static final int update=0x7f05002c;
+        public static final int update_msg=0x7f05002d;
+        public static final int update_msg1=0x7f05002e;
+        public static final int update_msg2=0x7f05002f;
+        public static final int update_notification_progressbar=0x7f05006d;
+        public static final int update_notification_progressblock=0x7f05006c;
+        public static final int upload_status=0x7f05002b;
+        public static final int wifi_download=0x7f050033;
+        public static final int xlistview_footer_content=0x7f050088;
+        public static final int xlistview_footer_hint_textview=0x7f05008a;
+        public static final int xlistview_footer_progressbar=0x7f050089;
+        public static final int xlistview_header_content=0x7f05008b;
+        public static final int xlistview_header_progressbar=0x7f05008c;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int atom_tree=0x7f030001;
         public static final int drawerlayout=0x7f030002;
-        public static final int image_test=0x7f030003;
-        public static final int index=0x7f030004;
-        public static final int toast_layout=0x7f030005;
-        public static final int tree_view_activity=0x7f030006;
-        public static final int xlistview_footer=0x7f030007;
-        public static final int xlistview_header=0x7f030008;
+        public static final int getui_notification=0x7f030003;
+        public static final int image_test=0x7f030004;
+        public static final int increment_popup_dialog=0x7f030005;
+        public static final int index=0x7f030006;
+        public static final int main=0x7f030007;
+        public static final int notification=0x7f030008;
+        public static final int notification_inc=0x7f030009;
+        public static final int silent_setting=0x7f03000a;
+        public static final int themes=0x7f03000b;
+        public static final int toast_layout=0x7f03000c;
+        public static final int tree_view_activity=0x7f03000d;
+        public static final int xlistview_footer=0x7f03000e;
+        public static final int xlistview_header=0x7f03000f;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
@@ -185,11 +298,20 @@ containing a value of this type.
     public static final class string {
         public static final int action_settings=0x7f080004;
         public static final int app_name=0x7f080002;
+        public static final int begin=0x7f080023;
+        public static final int bind_alias=0x7f080028;
+        public static final int bindcell=0x7f080020;
+        public static final int clear=0x7f08001e;
+        public static final int down=0x7f08001a;
+        public static final int duration=0x7f080025;
+        public static final int enablelog=0x7f08001f;
+        public static final int end=0x7f080024;
         public static final int facebook=0x7f08000b;
         /** 2.0 数据表的处理语句，可按照功能具体区分  
          */
         public static final int firstTestSql=0x7f080001;
         public static final int google=0x7f08000d;
+        public static final int hello=0x7f080018;
         public static final int hello_world=0x7f080003;
         /**  提示信息  
          */
@@ -201,12 +323,21 @@ containing a value of this type.
         public static final int info_net_unavailable=0x7f080016;
         public static final int linkedin=0x7f08000e;
         public static final int myspace=0x7f080010;
+        public static final int no_clientid=0x7f08001b;
+        public static final int pmsg=0x7f080021;
+        public static final int psmsg=0x7f080022;
+        public static final int send_msg=0x7f080027;
+        public static final int set_heartbeat=0x7f080026;
+        public static final int start=0x7f08001c;
         public static final int start_app=0x7f080011;
+        public static final int stop=0x7f08001d;
         /** 此处存储需要调用的sql语句，注意命名规则 
 1.0 创建数据表的语句，以后增加新的数据表创建语句，在此部分后面添加  
          */
         public static final int test=0x7f080000;
         public static final int twitter=0x7f08000c;
+        public static final int unbind_alias=0x7f080029;
+        public static final int up=0x7f080019;
         public static final int wordpress=0x7f08000f;
         public static final int xlistview_footer_hint_normal=0x7f080009;
         public static final int xlistview_footer_hint_ready=0x7f08000a;
@@ -230,17 +361,6 @@ containing a value of this type.
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 

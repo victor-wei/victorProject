@@ -34,41 +34,23 @@ public class MainActivity extends Activity  implements OnClickListener{
 		setContentView(R.layout.activity_main);
 		context = this;
 		initComponent();
-		
-		
 	}
     
 	private void initComponent() {
-		
 		jumpBtn = (Button) findViewById(R.id.jumpBtn);
-		 
 		jumpBtn.setOnClickListener(MainActivity.this);
 		drawer_btn = (Button) findViewById(R.id.drawer_btn);
-		
 		drawer_btn.setOnClickListener(MainActivity.this);
 		image_btn = (Button) findViewById(R.id.image_btn);
-		
 		image_btn.setOnClickListener(MainActivity.this);
 	}
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
 
 	@Override
 	public void onClick(View v) {
@@ -89,7 +71,6 @@ public class MainActivity extends Activity  implements OnClickListener{
 			imageIntent.setClass(context, ImageLoadActivity.class);
 			startActivity(imageIntent);
 			break;
-
 		default:
 			break;
 		}
