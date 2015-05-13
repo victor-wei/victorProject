@@ -16,7 +16,6 @@ public class PushDemoReceiver extends BroadcastReceiver {
 		Bundle bundle = intent.getExtras();
 		Log.d("GetuiSdkDemo", "onReceive() action=" + bundle.getInt("action"));
 		switch (bundle.getInt(PushConsts.CMD_ACTION)) {
-
 		case PushConsts.GET_MSG_DATA:
 			// 获取透传数据
 			// String appid = bundle.getString("appid");
@@ -27,12 +26,13 @@ public class PushDemoReceiver extends BroadcastReceiver {
 
 			// smartPush第三方回执调用接口，actionid范围为90000-90999，可根据业务场景执行
 			boolean result = PushManager.getInstance().sendFeedbackMessage(context, taskid, messageid, 90001);
-			System.out.println("第三方回执接口调用" + (result ? "成功" : "失败"));
+			Log.d("TAG", "Got Payload:" + new String(payload) + " Payload");
+			Log.i("TAG","第三方回执接口调用" + (result ? "成功" : "失败"));
 			
 			if (payload != null) {
 				String data = new String(payload);
 
-				Log.d("GetuiSdkDemo", "Got Payload:" + data);
+				Log.d("TAG", "Got Payload:" + data);
 				if (GetuiSdkDemoActivity.tLogView != null)
 					GetuiSdkDemoActivity.tLogView.append(data + "\n");
 			}
@@ -45,6 +45,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
 				GetuiSdkDemoActivity.tView.setText(cid);
 			break;
 		case PushConsts.THIRDPART_FEEDBACK:
+		    System.out.println("第三方回执接口调用2222222");
 			/*String appid = bundle.getString("appid");
 			String taskid = bundle.getString("taskid");
 			String actionid = bundle.getString("actionid");

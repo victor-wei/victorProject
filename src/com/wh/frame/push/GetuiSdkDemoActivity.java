@@ -46,7 +46,7 @@ public class GetuiSdkDemoActivity extends Activity implements OnClickListener {
 	/**
 	 * 第三方应用Master Secret，修改为正确的值
 	 */
-	private static final String MASTERSECRET = "6bLzdFZWFeAlPrjNms4Aq7";
+	private static final String MASTERSECRET = "98oJAqLMkb57zKUKaJTKZ9";
 
 	// 菜单
 	private static final int ADDTAG = 100;
@@ -199,6 +199,7 @@ public class GetuiSdkDemoActivity extends Activity implements OnClickListener {
 							String alias = editText.getEditableText().toString();
 							if (alias != null && alias.length() > 0) {
 								PushManager.getInstance().bindAlias(GetuiSdkDemoActivity.this, alias);
+								System.out.println(PushManager.getInstance().getClientid(GetuiSdkDemoActivity.this)+" client  ");
 								System.out.println("bind alias:"+editText.getEditableText().toString());
 								return ;
 							}

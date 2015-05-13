@@ -48,5 +48,23 @@
         android:layout_marginLeft="10dip"
         android:layout_below="@id/drawer_btn"
         android:background="#ffffff"/>
+    <Button 
+        android:id="@+id/push_show"
+        android:layout_width="wrap_content"
+        android:layout_height="30dip"
+        android:layout_marginTop="5dp"
+        android:text="个推"
+        android:layout_marginLeft="10dip"
+        android:layout_below="@id/image_btn"
+        android:background="#ffffff"/>
+    <Button 
+        android:id="@+id/push_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="30dip"
+        android:layout_marginTop="5dp"
+        android:text="个推demo"
+        android:layout_marginLeft="10dip"
+        android:layout_below="@id/push_show"
+        android:background="#ffffff"/>
 
 </RelativeLayout>

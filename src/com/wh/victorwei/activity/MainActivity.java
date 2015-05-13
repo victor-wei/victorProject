@@ -1,24 +1,18 @@
 package com.wh.victorwei.activity;
 
-import com.squareup.picasso.Picasso;
-import com.wh.victorwei.R;
-import com.wh.victorwei.R.drawable;
-import com.wh.victorwei.R.id;
-import com.wh.victorwei.R.layout;
-import com.wh.victorwei.R.menu;
-import com.wh.victorwei.test.TreeViewTest;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.wh.frame.push.GetuiSdkDemoActivity;
+import com.wh.victorwei.R;
+import com.wh.victorwei.test.TreeViewTest;
 
 public class MainActivity extends Activity  implements OnClickListener{
 	
@@ -27,6 +21,8 @@ public class MainActivity extends Activity  implements OnClickListener{
 	Button jumpBtn;
 	Button drawer_btn;
 	Button image_btn;
+	Button push_show;
+	Button push_demo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +39,10 @@ public class MainActivity extends Activity  implements OnClickListener{
 		drawer_btn.setOnClickListener(MainActivity.this);
 		image_btn = (Button) findViewById(R.id.image_btn);
 		image_btn.setOnClickListener(MainActivity.this);
+		push_show = (Button) findViewById(R.id.push_show);
+		push_show.setOnClickListener(MainActivity.this);
+		push_demo = (Button) findViewById(R.id.push_demo);
+		push_demo.setOnClickListener(MainActivity.this);
 	}
 	
 	@Override
@@ -70,6 +70,16 @@ public class MainActivity extends Activity  implements OnClickListener{
 			Intent imageIntent  = new Intent();
 			imageIntent.setClass(context, ImageLoadActivity.class);
 			startActivity(imageIntent);
+			break;
+		case R.id.push_show:
+			Intent push_show  = new Intent();
+			push_show.setClass(context, PushShowActivity.class);
+			startActivity(push_show);
+			break;
+		case R.id.push_demo:
+			Intent push_demo  = new Intent();
+			push_demo.setClass(context, GetuiSdkDemoActivity.class);
+			startActivity(push_demo);
 			break;
 		default:
 			break;

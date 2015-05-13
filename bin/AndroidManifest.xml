@@ -45,15 +45,13 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="com.wh.frame.push.GetuiSdkDemoActivity"
+            android:name="com.wh.victorwei.activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".activity.MainActivity" >
         </activity>
         <activity android:name=".test.TreeViewTest" >
         </activity>
@@ -62,6 +60,10 @@
         <activity android:name="com.wh.victorwei.activity.ImageLoadActivity" >
         </activity>
         <activity android:name="com.wh.victorwei.test.ImageTestActivity" >
+        </activity>
+        <activity android:name="com.wh.victorwei.activity.PushShowActivity" >
+        </activity>
+        <activity android:name="com.wh.frame.push.GetuiSdkDemoActivity" >
         </activity>
         <!-- 个推SDK配置开始 -->
         <!-- 配置的第三方参数属性 -->
@@ -83,7 +85,7 @@
             android:name="com.wh.frame.push.PushDemoReceiver"
             android:exported="false" >
             <intent-filter>
-                <action android:name="com.igexin.sdk.action.etVyv7RHJ28BqN3KKCtKJ6" />
+                <action android:name="com.igexin.sdk.action.YGxXJj0jS362Svo9BCqI83" />
             </intent-filter>
         </receiver>
 
@@ -136,7 +138,7 @@
 		<provider
 		    android:process=":pushservice" 
 		    android:name="com.igexin.download.DownloadProvider"
-			android:authorities="downloads.com.wh.frame.push"	/>
+			android:authorities="downloads.com.wh.victorwei"	/>
 			<!-- android:authorities="downloads.第三方包名" -->
 		
         <activity android:name="com.igexin.getuiext.activity.GetuiExtActivity"  

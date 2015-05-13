@@ -19,5 +19,8 @@ public class Setting {
 	public static Context GLOBAL_CONTEXT; // 全局Context
 
 	public static final int CONST_RESPONSE_CODE_SUCCESS = 200;
-
+    
+	// 个推配置
+	private static final String MASTERSECRET = "98oJAqLMkb57zKUKaJTKZ9";
+	
 }
