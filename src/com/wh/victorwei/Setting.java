@@ -22,5 +22,6 @@ public class Setting {
     
 	// 个推配置
 	private static final String MASTERSECRET = "98oJAqLMkb57zKUKaJTKZ9";
-	
+	public static String ip = "http://192.168.10.37:81/";
+	public static String victorServerUrl = ip+"testmysql1.php";
 }

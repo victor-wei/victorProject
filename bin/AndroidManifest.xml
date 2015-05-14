@@ -65,6 +65,8 @@
         </activity>
         <activity android:name="com.wh.frame.push.GetuiSdkDemoActivity" >
         </activity>
+        <activity android:name="com.wh.victorwei.activity.LoginActivity" >
+        </activity>
         <!-- 个推SDK配置开始 -->
         <!-- 配置的第三方参数属性 -->
         <meta-data

@@ -1,14 +1,14 @@
 package com.wh.victorwei.activity;
 
-import com.igexin.sdk.PushManager;
-
-import android.app.Application;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
 
-public class MyApplication extends Application {
+import com.igexin.sdk.PushManager;
+import com.ta.TAApplication;
+
+public class MyApplication extends TAApplication {
 	
 	// SDK参数，会自动从Manifest文件中读取，第三方无需修改下列变量，请修改AndroidManifest.xml文件中相应的meta-data信息。
 	// 修改方式参见个推SDK文档
