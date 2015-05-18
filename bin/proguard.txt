@@ -1,40 +1,40 @@
 # view res/layout/drawerlayout.xml #generated:5
 -keep class android.support.v4.widget.DrawerLayout { <init>(...); }
 
-# view AndroidManifest.xml #generated:140
+# view AndroidManifest.xml #generated:151
 -keep class com.igexin.download.DownloadProvider { <init>(...); }
 
-# view AndroidManifest.xml #generated:135
+# view AndroidManifest.xml #generated:145
 -keep class com.igexin.download.DownloadReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:134
+# view AndroidManifest.xml #generated:141
 -keep class com.igexin.download.DownloadService { <init>(...); }
 
-# view AndroidManifest.xml #generated:146
+# view AndroidManifest.xml #generated:157
 -keep class com.igexin.getuiext.activity.GetuiExtActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:163
+# view AndroidManifest.xml #generated:178
 -keep class com.igexin.getuiext.service.GetuiExtService { <init>(...); }
 
-# view AndroidManifest.xml #generated:154
+# view AndroidManifest.xml #generated:166
 -keep class com.igexin.getuiext.service.PayloadReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:125
+# view AndroidManifest.xml #generated:132
 -keep class com.igexin.sdk.PushActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:117
+# view AndroidManifest.xml #generated:124
 -keep class com.igexin.sdk.PushManagerReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:102
+# view AndroidManifest.xml #generated:107
 -keep class com.igexin.sdk.PushReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:95
+# view AndroidManifest.xml #generated:100
 -keep class com.igexin.sdk.PushService { <init>(...); }
 
-# view AndroidManifest.xml #generated:66
+# view AndroidManifest.xml #generated:71
 -keep class com.wh.frame.push.GetuiSdkDemoActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:86
+# view AndroidManifest.xml #generated:91
 -keep class com.wh.frame.push.PushDemoReceiver { <init>(...); }
 
 # view res/layout/index.xml #generated:35
@@ -48,29 +48,47 @@
 # view res/layout/index.xml #generated:23
 -keep class com.wh.frame.view.circle.CircleLayout { <init>(...); }
 
-# view AndroidManifest.xml #generated:58
+# view AndroidManifest.xml #generated:193
+-keep class com.wh.frame.xiaomipush.DemoMessageReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:63
 -keep class com.wh.victorwei.activity.DrawLayoutActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:60
+# view AndroidManifest.xml #generated:65
 -keep class com.wh.victorwei.activity.ImageLoadActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:68
+# view AndroidManifest.xml #generated:73
 -keep class com.wh.victorwei.activity.LoginActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:47
+# view AndroidManifest.xml #generated:52
 -keep class com.wh.victorwei.activity.MainActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:42
+# view AndroidManifest.xml #generated:47
 -keep class com.wh.victorwei.activity.MyApplication { <init>(...); }
 
-# view AndroidManifest.xml #generated:64
+# view AndroidManifest.xml #generated:69
 -keep class com.wh.victorwei.activity.PushShowActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:62
+# view AndroidManifest.xml #generated:67
 -keep class com.wh.victorwei.test.ImageTestActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:56
+# view AndroidManifest.xml #generated:61
 -keep class com.wh.victorwei.test.TreeViewTest { <init>(...); }
+
+# view AndroidManifest.xml #generated:189
+-keep class com.xiaomi.mipush.sdk.MessageHandleService { <init>(...); }
+
+# view AndroidManifest.xml #generated:185
+-keep class com.xiaomi.mipush.sdk.PushMessageHandler { <init>(...); }
+
+# view AndroidManifest.xml #generated:181
+-keep class com.xiaomi.push.service.XMPushService { <init>(...); }
+
+# view AndroidManifest.xml #generated:203
+-keep class com.xiaomi.push.service.receivers.NetworkStatusReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:212
+-keep class com.xiaomi.push.service.receivers.PingReceiver { <init>(...); }
 
 # onClick res/layout/activity_login.xml #generated:124
 -keepclassmembers class * { *** login(...); }

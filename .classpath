@@ -7,6 +7,7 @@
 	<classpathentry kind="lib" path="libs/GetuiExt-2.0.3.jar"/>
 	<classpathentry kind="lib" path="libs/GetuiSdk2.4.1.0.jar"/>
 	<classpathentry kind="lib" path="libs/fastjson-1.1.17.jar"/>
+	<classpathentry kind="lib" path="libs/MiPush_SDK_Client_2_2_14_sdk.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>

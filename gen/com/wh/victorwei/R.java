@@ -369,6 +369,7 @@ containing a value of this type.
         public static final int bindcell=0x7f080020;
         public static final int clear=0x7f08001e;
         public static final int confirmpassword=0x7f08002e;
+        public static final int current_env=0x7f080038;
         public static final int down=0x7f08001a;
         public static final int duration=0x7f080025;
         public static final int enablelog=0x7f08001f;
@@ -389,24 +390,48 @@ containing a value of this type.
         public static final int info_more=0x7f080014;
         public static final int info_net_unavailable=0x7f080016;
         public static final int linkedin=0x7f08000e;
+        public static final int log=0x7f08002f;
         public static final int login=0x7f08002a;
         public static final int myspace=0x7f080010;
         public static final int no_clientid=0x7f08001b;
+        public static final int official_env=0x7f080039;
         public static final int password=0x7f08002c;
+        public static final int pause_push=0x7f080037;
         public static final int pmsg=0x7f080021;
         public static final int psmsg=0x7f080022;
+        public static final int recv_message=0x7f08003d;
         public static final int register=0x7f08002d;
+        public static final int register_fail=0x7f08003c;
+        public static final int register_success=0x7f08003b;
+        public static final int sandbox_env=0x7f08003a;
         public static final int send_msg=0x7f080027;
+        public static final int set_accept_time=0x7f080036;
+        public static final int set_accept_time_fail=0x7f080047;
+        public static final int set_accept_time_success=0x7f080046;
+        public static final int set_alias=0x7f080031;
+        public static final int set_alias_fail=0x7f08003f;
+        public static final int set_alias_success=0x7f08003e;
+        public static final int set_env=0x7f080035;
         public static final int set_heartbeat=0x7f080026;
+        public static final int settings=0x7f080030;
         public static final int start=0x7f08001c;
         public static final int start_app=0x7f080011;
         public static final int stop=0x7f08001d;
+        public static final int subscribe_topic=0x7f080033;
+        public static final int subscribe_topic_fail=0x7f080043;
+        public static final int subscribe_topic_success=0x7f080042;
         /** 此处存储需要调用的sql语句，注意命名规则 
 1.0 创建数据表的语句，以后增加新的数据表创建语句，在此部分后面添加  
          */
         public static final int test=0x7f080000;
         public static final int twitter=0x7f08000c;
         public static final int unbind_alias=0x7f080029;
+        public static final int unset_alias=0x7f080032;
+        public static final int unset_alias_fail=0x7f080041;
+        public static final int unset_alias_success=0x7f080040;
+        public static final int unsubscribe_topic=0x7f080034;
+        public static final int unsubscribe_topic_fail=0x7f080045;
+        public static final int unsubscribe_topic_success=0x7f080044;
         public static final int up=0x7f080019;
         public static final int user_name=0x7f08002b;
         public static final int wordpress=0x7f08000f;

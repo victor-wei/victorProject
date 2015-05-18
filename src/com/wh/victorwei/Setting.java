@@ -22,6 +22,10 @@ public class Setting {
     
 	// 个推配置
 	private static final String MASTERSECRET = "98oJAqLMkb57zKUKaJTKZ9";
-	public static String ip = "http://192.168.10.37:81/";
-	public static String victorServerUrl = ip+"testmysql1.php";
+	public static String ip = "http://192.168.10.37:8888/";
+	public static String victorServerUrl = "http://192.168.10.37:8888/testmysql.php";
+	
+	public static String xiaomiPushAppId = "2882303761517336262";
+	public static String xiaomiPushAppKey= "5171733662262";
+	public static String xiaomiPushAppSecret = "s/mAofS+Lco2U7mHhymgXA==";
 }

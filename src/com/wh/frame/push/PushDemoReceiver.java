@@ -14,7 +14,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		Bundle bundle = intent.getExtras();
-		Log.d("GetuiSdkDemo", "onReceive() action=" + bundle.getInt("action"));
+		Log.d("TAG", "onReceive() action=" + bundle.getInt("action"));
 		switch (bundle.getInt(PushConsts.CMD_ACTION)) {
 		case PushConsts.GET_MSG_DATA:
 			// 获取透传数据
@@ -38,6 +38,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
 			}
 			break;
 		case PushConsts.GET_CLIENTID:
+			Log.i("TAG", "GET_CLIENTID");
 			// 获取ClientID(CID)
 			// 第三方应用需要将CID上传到第三方服务器，并且将当前用户帐号和CID进行关联，以便日后通过用户帐号查找CID进行消息推送
 			String cid = bundle.getString("clientid");
@@ -45,6 +46,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
 				GetuiSdkDemoActivity.tView.setText(cid);
 			break;
 		case PushConsts.THIRDPART_FEEDBACK:
+			Log.i("TAG", "THIRDPART_FEEDBACK");
 		    System.out.println("第三方回执接口调用2222222");
 			/*String appid = bundle.getString("appid");
 			String taskid = bundle.getString("taskid");

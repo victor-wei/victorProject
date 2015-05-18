@@ -1,9 +1,13 @@
 package com.wh.victorwei.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,11 +28,14 @@ public class MainActivity extends Activity implements OnClickListener {
 	Button push_show;
 	Button push_demo;
 	Button login_show;
+	public static List<String> logList = new ArrayList<String>();
+	 public static MainActivity sMainActivity = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		sMainActivity = this;
 		context = this;
 		initComponent();
 	}
@@ -92,4 +99,18 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 		}
 	}
+	
+	@Override
+    protected void onResume() {
+        super.onResume();
+        refreshLogInfo();
+    }
+
+    public void refreshLogInfo() {
+        String AllLog ="";
+        for(String log : logList) {
+            AllLog = AllLog + log + "\n\n";
+        }
+        Log.i(MyApplication.TAG, AllLog+"  allLog");
+    }
 }

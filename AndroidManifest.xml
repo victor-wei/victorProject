@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="7"
-        android:targetSdkVersion="14" />
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
 
     <!-- Used to load images from the gallery content provider. -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -26,6 +26,7 @@
 
     <!-- <uses-permission android:name="getui.permission.GetuiService.第三方包名" /> -->
     <uses-permission android:name="getui.permission.GetuiService.com.wh.victorwei" />
+    <uses-permission android:name="com.wh.victorwei.permission.MIPUSH_RECEIVE" />
 
     <!-- 自定义权限 -->
     <!--
@@ -38,6 +39,10 @@
         android:name="getui.permission.GetuiService.com.wh.victorwei"
         android:protectionLevel="normal" >
     </permission>
+    <permission
+        android:name="com.wh.victorwei.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
 
     <application
         android:name="com.wh.victorwei.activity.MyApplication"
@@ -81,8 +86,8 @@
         <meta-data
             android:name="PUSH_GROUPID"
             android:value="" />
-           
-		<!-- 配置第三方Receiver -->
+
+        <!-- 配置第三方Receiver -->
         <receiver
             android:name="com.wh.frame.push.PushDemoReceiver"
             android:exported="false" >
@@ -94,9 +99,9 @@
         <!-- 配置SDK核心服务 -->
         <service
             android:name="com.igexin.sdk.PushService"
-            android:process=":pushservice"
             android:exported="true"
-            android:label="NotificationCenter" >
+            android:label="NotificationCenter"
+            android:process=":pushservice" >
         </service>
 
         <receiver android:name="com.igexin.sdk.PushReceiver" >
@@ -107,13 +112,15 @@
                 <action android:name="com.igexin.sdk.action.refreshls" />
             </intent-filter>
         </receiver>
-        <!-- <receiver
+        <!--
+        <receiver
             android:name="com.igexin.sdk.PushReceiver"
             android:exported="false" >
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.pushmanager" />
             </intent-filter>
-        </receiver> -->
+        </receiver>
+        -->
         <receiver
             android:name="com.igexin.sdk.PushManagerReceiver"
             android:exported="false" >
@@ -121,7 +128,7 @@
                 <action android:name="com.igexin.sdk.action.pushmanager" />
             </intent-filter>
         </receiver>
-        
+
         <activity
             android:name="com.igexin.sdk.PushActivity"
             android:excludeFromRecents="true"
@@ -130,38 +137,86 @@
             android:taskAffinity="com.igexin.sdk.PushActivityTask"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
-        
-		<service android:name="com.igexin.download.DownloadService" android:process=":pushservice" />
-		<receiver android:name="com.igexin.download.DownloadReceiver"> 
-			<intent-filter>
-				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-			</intent-filter>
-		</receiver>
-		<provider
-		    android:process=":pushservice" 
-		    android:name="com.igexin.download.DownloadProvider"
-			android:authorities="downloads.com.wh.victorwei"	/>
-			<!-- android:authorities="downloads.第三方包名" -->
-		
-        <activity android:name="com.igexin.getuiext.activity.GetuiExtActivity"  
-        	android:configChanges="orientation|keyboard|keyboardHidden"
+
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.com.wh.victorwei"
+            android:process=":pushservice" />
+        <!-- android:authorities="downloads.第三方包名" -->
+
+        <activity
+            android:name="com.igexin.getuiext.activity.GetuiExtActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
             android:excludeFromRecents="true"
+            android:exported="false"
             android:process=":pushservice"
             android:taskAffinity="android.task.myServicetask"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:exported="false" />
-        
-        <receiver android:name="com.igexin.getuiext.service.PayloadReceiver" android:exported="false" >
-			<intent-filter>
-			  	<!-- 这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改  -->
-				<action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
-				<!-- android:name="com.igexin.sdk.action.第三方的appId" -->				
-				<action android:name="com.igexin.sdk.action.YGxXJj0jS362Svo9BCqI83" />
-			</intent-filter>
-		</receiver>
-        
-        <service android:name="com.igexin.getuiext.service.GetuiExtService" android:process=":pushservice" />
-        
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.igexin.getuiext.service.PayloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- 这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改 -->
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+                <!-- android:name="com.igexin.sdk.action.第三方的appId" -->
+                <action android:name="com.igexin.sdk.action.YGxXJj0jS362Svo9BCqI83" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.igexin.getuiext.service.GetuiExtService"
+            android:process=":pushservice" />
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+
+        <receiver
+            android:name="com.wh.frame.xiaomipush.DemoMessageReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice" >
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

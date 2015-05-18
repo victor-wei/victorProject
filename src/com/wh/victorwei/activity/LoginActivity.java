@@ -1,5 +1,6 @@
 package com.wh.victorwei.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,7 +18,7 @@ import com.ta.util.http.RequestParams;
 import com.wh.victorwei.R;
 import com.wh.victorwei.Setting;
 
-public class LoginActivity extends ThinkAndroidBaseActivity {
+public class LoginActivity extends Activity {
 
 	private Button register_btn;
 	private Button login_btn;
@@ -71,7 +72,7 @@ public class LoginActivity extends ThinkAndroidBaseActivity {
 						params.put("password", passwordString);
 						try {
 							String content="sssss"; 
-							content = syncHttpClient.get(Setting.victorServerUrl+"?command=user");
+							content = syncHttpClient.get(Setting.victorServerUrl);
 //						String content = syncHttpClient
 //								.get(Setting.victorServerUrl + "command=user");
 						Log.i("TAG", content + " content");
@@ -84,12 +85,12 @@ public class LoginActivity extends ThinkAndroidBaseActivity {
 //								String password = json.getString("password");
 //								if (name.equals(userName)
 //										&& password.equals(passwordString)) {
-//									PushManager.getInstance().bindAlias(
-//											getApplicationContext(),
-//											username.getText().toString());
-//									String clientId = PushManager.getInstance()
-//											.getClientid(getApplicationContext());
-//									Log.i("TAG", clientId + " clientId");
+									PushManager.getInstance().bindAlias(
+											getApplicationContext(),
+											username.getText().toString());
+									String clientId = PushManager.getInstance()
+											.getClientid(getApplicationContext());
+									Log.i("TAG", clientId + " clientId");
 //								}
 //							}
 							
