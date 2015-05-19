@@ -23,7 +23,6 @@ public class ImageTestActivity extends Activity implements OnItemSelectedListene
 		CircleLayout circleMenu = (CircleLayout)findViewById(R.id.main_circle_layout);
 		circleMenu.setOnItemSelectedListener(this);
 		circleMenu.setOnItemClickListener(this);
-
 		selectedTextView = (TextView)findViewById(R.id.main_selected_textView);
 		selectedTextView.setText(((CircleImageView)circleMenu.getSelectedItem()).getName());
 	}

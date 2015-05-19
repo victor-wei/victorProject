@@ -16,64 +16,91 @@
         android:text="victors" />
     <Button 
         android:id="@+id/jumpBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="100dip"
         android:layout_height="30dip"
         android:text="树结构"
         android:layout_marginLeft="10dip"
         android:layout_marginTop="5dp"
         android:layout_below="@id/picassoTv"
-        android:background="#ffffff"/>
+        android:background="#ffffff"
+        android:textColor="@color/black"/>
     <ImageView 
         android:id="@+id/picassoImg"
         android:layout_below="@id/jumpBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:textColor="@color/black"
         />
     <Button 
         android:id="@+id/drawer_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="100dip"
         android:layout_height="30dip"
-        android:layout_marginTop="5dp"
         android:text="drawer"
         android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
         android:layout_below="@id/picassoImg"
-        android:background="#ffffff"/>
+        android:background="#ffffff"
+        android:textColor="@color/black"/>
     <Button 
         android:id="@+id/image_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="100dip"
         android:layout_height="30dip"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="image"
         android:layout_marginLeft="10dip"
         android:layout_below="@id/drawer_btn"
-        android:background="#ffffff"/>
+        android:background="#ffffff"
+        android:textColor="@color/black"/>
     <Button 
         android:id="@+id/push_show"
-        android:layout_width="wrap_content"
+        android:layout_width="100dip"
         android:layout_height="30dip"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="个推"
         android:layout_marginLeft="10dip"
         android:layout_below="@id/image_btn"
-        android:background="#ffffff"/>
+        android:background="#ffffff"
+        android:textColor="@color/black"/>
     <Button 
         android:id="@+id/push_demo"
-        android:layout_width="wrap_content"
+        android:layout_width="100dip"
         android:layout_height="30dip"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="个推demo"
         android:layout_marginLeft="10dip"
         android:layout_below="@id/push_show"
-        android:background="#ffffff"/>
+        android:background="#ffffff"
+        android:textColor="@color/black"/>
     <Button 
         android:id="@+id/login_show"
-        android:layout_width="wrap_content"
+        android:layout_width="100dip"
         android:layout_height="30dip"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="登录页面"
         android:layout_marginLeft="10dip"
         android:layout_below="@id/push_demo"
-        android:background="#ffffff"/>
+        android:background="#ffffff"
+        android:textColor="@color/black"/>
+    <Button 
+        android:id="@+id/zhuanpan_btn"
+        android:layout_width="100dip"
+        android:layout_height="30dip"
+        android:layout_marginTop="10dp"
+        android:text="转盘"
+        android:layout_marginLeft="10dip"
+        android:layout_below="@id/login_show"
+        android:background="#ffffff"
+        android:textColor="@color/black"/>
+    <Button 
+        android:id="@+id/xiaomipush_btn"
+        android:layout_width="100dip"
+        android:layout_height="30dip"
+        android:layout_marginTop="10dp"
+        android:text="小米推送"
+        android:layout_marginLeft="10dip"
+        android:layout_below="@id/zhuanpan_btn"
+        android:background="#ffffff"
+        android:textColor="@color/black"/>
 
 </RelativeLayout>

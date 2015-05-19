@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.wh.frame.push.GetuiSdkDemoActivity;
 import com.wh.victorwei.R;
+import com.wh.victorwei.test.ImageTestActivity;
 import com.wh.victorwei.test.TreeViewTest;
 
 public class MainActivity extends Activity implements OnClickListener {
@@ -28,6 +29,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	Button push_show;
 	Button push_demo;
 	Button login_show;
+	Button zhuanpan_btn;
+	Button xiaomipush_btn;
 	public static List<String> logList = new ArrayList<String>();
 	 public static MainActivity sMainActivity = null;
 
@@ -53,6 +56,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		push_demo.setOnClickListener(MainActivity.this);
 	    login_show = (Button) findViewById(R.id.login_show);
 		login_show.setOnClickListener(MainActivity.this);
+		xiaomipush_btn = (Button) findViewById(R.id.xiaomipush_btn);
+		xiaomipush_btn.setOnClickListener(MainActivity.this);
+		zhuanpan_btn = (Button) findViewById(R.id.zhuanpan_btn);
+		zhuanpan_btn.setOnClickListener(MainActivity.this);
 	}
 
 	@Override
@@ -94,6 +101,16 @@ public class MainActivity extends Activity implements OnClickListener {
 			Intent login_show = new Intent();
 			login_show.setClass(context, LoginActivity.class);
 			startActivity(login_show);
+			break;
+		case R.id.xiaomipush_btn:
+			Intent xiaomipush_intent = new Intent();
+			xiaomipush_intent.setClass(context, LoginActivity.class);
+			startActivity(xiaomipush_intent);
+			break;
+		case R.id.zhuanpan_btn:
+			Intent zhuanpan_intent = new Intent();
+			zhuanpan_intent.setClass(context,ImageTestActivity.class);
+			startActivity(zhuanpan_intent);
 			break;
 		default:
 			break;
